@@ -63,10 +63,10 @@ def doorstop_yaml_format(filename):
         if not contents['attributes']['defaults'].get('rationale'):
             contents['attributes']['defaults']['rationale'] = None
 
-        # Default is "Unverified"
+        # Default is "unverified"
         x = contents['attributes']['defaults'].get('verified-by')
         if not x or x is None:
-            contents['attributes']['defaults']['verified-by'] = 'Unverified'
+            contents['attributes']['defaults']['verified-by'] = 'unverified'
 
 
     with open(filename, 'w') as yml_file:
