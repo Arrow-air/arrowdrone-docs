@@ -7,5 +7,6 @@ attributes:
   - rationale
 settings:
   digits: 4
-  prefix: REQ
+  parent: REQ
+  prefix: CMD_SVC
   sep: '-'

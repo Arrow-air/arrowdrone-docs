@@ -21,7 +21,6 @@ def check_item(item, tree, document):
         yield DoorstopError("Rationale is required!")
 
     uid = item.get('path').split('/')[-1]
-    print(uid)
     if len(item.get('links')) == 0 and not uid.startswith('REQ'):
         yield DoorstopError("A parent is required for a lower level requirement!")
 

@@ -10,6 +10,6 @@ rationale: |
   Command packets will be continuous (remote control transmitter) or aperiodic (command to change configuration).
   Rate (Hz) to process command packets TBD depending on hardware selected.
 ref: ''
-reviewed: AbnblCjEnhNMbHNEq5QeY3bMxGUiJ7hs42ztxYG8GHQ=
+reviewed: L8OWpS5A219vyMeiNOJKoU9NHXT3K-10pa2IQmogrws=
 text: |
   CMD_SVC shall process a command packet once every FIXME Hz RTI.

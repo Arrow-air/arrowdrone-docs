@@ -7,6 +7,9 @@
 - [Requirement Files](#requirement-files)
 - [How to Validate the Requirements](#how-to-validate-the-requirements)
 - [How to Export Requirements](#how-to-export-requirements)
+- [How to Add a Requirement Category](#how-to-add-a-requirement-category)
+- [How to Add a Requirement](#how-to-add-a-requirement)
+- [How to View Requirements](#how-to-view-requirements)
 
 ## Dependencies
 
@@ -38,12 +41,12 @@ An example layout of requirements is below.
 │   └── FLIGHT
 │       └── FLIGHT-0001.yml
 └── SW
-    ├── CMD
-    │   ├── CMD-0001.yml
-    ├── HEALTH
-    │   ├── HEALTH-0001.yml
-    └── TLM
-        ├── TLM-0001.yml
+    ├── CMD_SVC
+    │   ├── CMD_SVC-0001.yml
+    ├── HEALTH_SVC
+    │   ├── HEALTH_SVC-0001.yml
+    └── TLM_SVC
+        ├── TLM_SVC-0001.yml
 ```
 
 ## Requirement Files
@@ -51,7 +54,7 @@ An example layout of requirements is below.
 The requirements are individual `.yml` files. Each contains the requirement's primary text as well as metadata.
 
 ```yml
-# reqs/SW/HEALTH/HEALTH-0001.yml
+# reqs/SW/HEALTH/HEALTH_SVC-0001.yml
 active: true
 derived: false
 header: ''
@@ -81,9 +84,10 @@ Important Field | Description
 Use the `reqs/build` script.
 
 `reqs/build` will call:
+- `doorstop_yml_formatter.yml` (enforces fields in `.doorstop.yml`)
 - `doorstop_hooks.py` (a wrapper around `doorstop` with extra rules)
 - `doorstop publish all public/`
-- `doorstop export REQ ./requirements.xlsx`
+- `doorstop export all ./csv_files/`
 
 An ideal build will look like so:
 
@@ -94,8 +98,9 @@ loading documents...
 publishing tree to '/home/ams/gitprojects/arrowdrone-docs/reqs/REQ'...
 published: /home/ams/gitprojects/arrowdrone-docs/reqs/REQ
 building tree...
-exporting document REQ to './requirements.xlsx'...
-exported: ./requirements.xlsx
+loading documents...
+exporting tree to './csv_files'...
+exported: ./csv_files
 ```
 
 Common errors and their fixes:
@@ -103,7 +108,7 @@ Common errors and their fixes:
 Common Error | Fix
 --- | ---
 `EXAMPLE-0001: Rationale is required!` | Populate a `rationale` field in the requirement file.
-`EXAMPLE-0001: A parent is required for a lower level requirement!` | `doorstop link EXAMPLE-0001 PARENT-0001`<br>Or manually update the `links` field for the req.
+`EXAMPLE-0001: A parent is required for a lower level requirement!` | `doorstop link EXAMPLE-0001 REQ-####`<br>Or manually update the `links` field in the requirement's `.yml`.
 `EXAMPLE-0001: suspect link` | `doorstop clear EXAMPLE-0001`.<br>Use `all` resolving all suspect links. This occurs sometimes when the parent requirement changes.
 `EXAMPLE-0001: unreviewed changes` | `doorstop review EXAMPLE-0001`.<br>Use `all` for resolving all reviews.
 
@@ -111,9 +116,9 @@ Common Error | Fix
 
 You may be more comfortable with viewing requirements in an Excel spreadsheet.
 
-The `build` script should produce a `requirements.xlsx` file.
+The `build` script should produce a `reqs/csv_files` directory.
 
-You can also run `doorstop export REQ path/to/tst.xlsx` (also supports tsv, csv, or yml).
+You can also run `doorstop export REQ path/to/tst.xlsx` (also supports tsv, csv, or yml), or similarly call it for any other requirement category.
 
 ## How to Add a Requirement Category
 
@@ -127,7 +132,30 @@ created document: PWR (@/reqs/HW/PWR)
 ```
 
 You will see that a new directory was created and populated with a `.doorstop.yml` file:
+```yaml
+settings:
+  digits: 3
+  parent: REQ
+  prefix: PWR
+  sep: ''
+```
 
+We have specific fields for this project. All `.doorstop.yml` files not following the project standard will be rectified when the `build` script is called.
+
+Output after `./build`:
+
+```yaml
+attributes:
+  publish:
+  - verified-by
+  - type
+  - rationale
+settings:
+  digits: 4
+  parent: REQ
+  prefix: PWR
+  sep: '-'
+```
 
 If we build now, we will get a warning: `PWR: no items`.
 
@@ -139,5 +167,32 @@ Requirements can be added with `doorstop add`:
 # doorstop add <category>
 $ doorstop add PWR
 building tree...
-created document: PWR (@/reqs/HW/PWR)
+added item: PWR-0001 (@/reqs/HW/PWR/PWR-0001.yml)
 ```
+The new file can be manually populated with the required fields.
+
+You must then link the requirement to a parent requirement before the build can succeed:
+
+`doorstop link PWR-0001 REQ-####`
+
+You can add multiple requirements add the same time with the `-c` option:
+
+```bash
+$ doorstop add PWR -c 3
+building tree...
+added item: PWR-0002 (@/reqs/HW/PWR/PWR-0002.yml)
+added item: PWR-0003 (@/reqs/HW/PWR/PWR-0003.yml)
+added item: PWR-0004 (@/reqs/HW/PWR/PWR-0004.yml)
+```
+
+## How to View Requirements
+
+To view the requirements outside of source code, do one of the following:
+1) `doorstop-server`
+    - Visit `localhost:7867` in your browser
+2) `python -m http.server PORT` 
+    - Visit `localhost:PORT` in your browser
+3) `doorstop-gui`
+    - tkinter application
+4) TODO: Visit arrowair.com arrowdrone subdir
+5) Open the csv file(s) in Excel.

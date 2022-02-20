@@ -5,7 +5,7 @@ import sys
 import yaml
 
 DIGITS = 4
-SEPERATOR = '-'
+SEPARATOR = '-'
 
 def failure(msg):
     print("ERROR: %s. Failing %s." % (
@@ -14,20 +14,29 @@ def failure(msg):
     sys.exit(1)
 
 def yaml_format(filename):
-    contents = yaml.safe_load(filename)
-    if not contents:
-        failure("Unable to parse %s." % filename)
-    
-    contents['sep'] = SEPARATOR
-    contents['digits'] = DIGITS
-    if not contents['attributes']:
-        contents['attributes'] = {}
-    
-    contents['attributes']['publish'] = [
-        'verified-by',
-        'type',
-        'rationale'
-    ]
+    with open(filename, 'r') as f:
+        contents = yaml.safe_load(f)
+        if not contents:
+            failure("Unable to parse %s." % filename)
+        
+        if not contents.get('settings'):
+            contents['settings'] = {}
+
+        contents['settings']['sep'] = SEPARATOR
+        contents['settings']['digits'] = DIGITS
+
+        if not contents.get('attributes'):
+            contents['attributes'] = {}
+        
+        contents['attributes']['publish'] = [
+            'verified-by',
+            'type',
+            'rationale'
+        ]
+
+        if not contents['attributes'].get('defaults'):
+            contents['attributes']['defaults'] = {}
+            contents['attributes']['defaults']['type'] = 'Requirement'
 
     with open(filename, 'w') as yml_file:
         yaml.dump(contents, yml_file)

@@ -9,6 +9,6 @@ normative: true
 rationale: |
   "Parameterized" means we can change this value with a ground command while the vehicle is in flight.
 ref: ''
-reviewed: -vTybbXz6VtuSE6fM7UYLnOvfSXpetbiIJ3YTfVfyJs=
+reviewed: eaAFSvBx--BqcxUl0bfgJOTdlLa92YA9724nhEB6LIc=
 text: |
   TLM_SVC shall downlink telemetry at a parameterized frequency.

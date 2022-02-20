@@ -9,6 +9,6 @@ normative: true
 rationale: |
   FIXME: Decide on this value. Likely to slide depeneding on EVR volume.
 ref: ''
-reviewed: xxk1yTdOXHlTP-D9_EL0QF0sh5GFz0O5-4MUhsVLSU4=
+reviewed: C4mC5AuGQrVLCoqcD1iF7SXnUl92Vy4jUYmEGSK90Cc=
 text: |
   TLM_SVC shall downlink event report packets once per FIXME Hz RTI.

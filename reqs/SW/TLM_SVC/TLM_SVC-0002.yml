@@ -7,6 +7,6 @@ links:
 normative: true
 rationale: Don't want to drop potentially critical event reports.
 ref: ''
-reviewed: vK5TBz4s-tF78C_D5CxuahGZ7DcuL6AYspX22uFSK4c=
+reviewed: k0J2zZJVlwBW4rJQK4Y5XZxMLikBh4tvkEOIxMH1ysY=
 text: |
   TLM_SVC shall queue event reports.
