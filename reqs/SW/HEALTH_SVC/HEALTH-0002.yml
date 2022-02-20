@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links:
+- REQ-0001: MATot0753ONzuVAaPgmlKD3O0dKpM-25Bmgk0jf31E0=
+normative: true
+rationale: |
+  A module may need to check if a device is healthy prior to requesting some action.
+ref: ''
+reviewed: FPS1zkizD4p5cetwZ8gXUyCAyNLPSBglay5GRoWUr24=
+text: |
+  HEALTH_SVC shall provide an interface to get the health status (HEALTHY, SICK, or DEAD) of a device.
+type: Requirement
+verified-by: Unit Test

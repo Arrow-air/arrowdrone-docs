@@ -111,6 +111,7 @@ Common Error | Fix
 `EXAMPLE-0001: A parent is required for a lower level requirement!` | `doorstop link EXAMPLE-0001 REQ-####`<br>Or manually update the `links` field in the requirement's `.yml`.
 `EXAMPLE-0001: suspect link` | `doorstop clear EXAMPLE-0001`.<br>Use `all` resolving all suspect links. This occurs sometimes when the parent requirement changes.
 `EXAMPLE-0001: unreviewed changes` | `doorstop review EXAMPLE-0001`.<br>Use `all` for resolving all reviews.
+`WARNING: no item with UID: EXAMPLE-0001` | This can happen if `active:false` in `EXAMPLE-0001.yml`.
 
 ## How to Export Requirements
 
