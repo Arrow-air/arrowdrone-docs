@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.6
+links: []
+normative: true
+rationale: |
+  Command packets will be continuous (remote control transmitter) or aperiodic (command to change configuration).
+  Rate (Hz) to process command packets TBD depending on hardware selected.
+ref: ''
+reviewed: Kqsc6a-OEYsUHSXCo0h_xmwXz7oQswxBCA2LMgQLCLI=
+text: |
+  The platform shall receive and process commands.

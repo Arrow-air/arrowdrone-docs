@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.3
+links: []
+normative: true
+rationale: |
+  The drone will have a flight duration, must be safely controlled (manual or autonomous), and will carry payloads.
+ref: ''
+reviewed: KJbcY6mEnaQiumBuEOTotUFkhGpCxG_g3fCK0ThW95M=
+text: |
+  The platform shall be capable of sustained and controlled flight under load.

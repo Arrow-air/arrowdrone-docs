@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.2
+links:
+- REQ-0003: MM0cI5pdfHZp9_6Ew305M5pmhHu0MaZnsQQ1r2BlkTU=
+- REQ-0006: vciObFMLpnSwMND9dFxQjwHHfANnD-BBroJHyryfl-c=
+normative: true
+rationale: |
+  FIXME: Decide on this value. Likely to slide depeneding on EVR volume.
+ref: ''
+reviewed: xxk1yTdOXHlTP-D9_EL0QF0sh5GFz0O5-4MUhsVLSU4=
+text: |
+  TLM_SVC shall downlink event report packets once per FIXME Hz RTI.

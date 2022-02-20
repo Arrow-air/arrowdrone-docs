@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- REQ-0004: KJbcY6mEnaQiumBuEOTotUFkhGpCxG_g3fCK0ThW95M=
+normative: true
+rationale: |
+  FIXME: Decide on this value. Need to decide lift goals (movie camera? packages?)
+ref: ''
+reviewed: n3JctxP-exqx5GI4L_7_Hf9ywg_JSU_PoSTUiakaUzQ=
+text: |
+  The platform shall have a lift capacity of X kilograms.

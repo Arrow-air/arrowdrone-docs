@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- REQ-0008: YW22H8xaKJL8USRbxri4QPw7iLx5fpo4xbsMcDgwc8Q=
+normative: true
+rationale: |
+  See [Mars Climate Orbiter](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter)
+ref: ''
+reviewed: Cfq47pZ7chTEp0Nuc8AXHcEZS81KdBn3oXdcfe1uqr0=
+text: |
+  The project shall enforce explicitly stating the SI Unit beside any numerical value of measurement.

@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links:
+- REQ-0006: vciObFMLpnSwMND9dFxQjwHHfANnD-BBroJHyryfl-c=
+normative: true
+rationale: Don't want to drop potentially critical event reports.
+ref: ''
+reviewed: vK5TBz4s-tF78C_D5CxuahGZ7DcuL6AYspX22uFSK4c=
+text: |
+  TLM_SVC shall queue event reports.

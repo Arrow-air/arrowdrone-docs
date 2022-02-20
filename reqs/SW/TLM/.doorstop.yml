@@ -1,0 +1,9 @@
+settings:
+  digits: 4
+  parent: REQ
+  prefix: TLM
+  sep: '-'
+attributes:
+  publish:
+    - verified-by
+    - rationale

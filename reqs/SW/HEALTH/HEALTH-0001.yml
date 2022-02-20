@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- REQ-0001: MATot0753ONzuVAaPgmlKD3O0dKpM-25Bmgk0jf31E0=
+normative: true
+rationale: |
+  If a device is acting offnominally, the software manager in charge of that device may elect to mark it as SICK or DEAD
+   to prevent accidental further usage.
+ref: ''
+reviewed: 7Pi6ZnjoRSEqcevT_DevP6N0liXRQPDnPh1W4QYxSz4=
+text: |
+  HEALTH_SVC shall provide an interface to mark a device as HEALTHY, SICK, or DEAD.

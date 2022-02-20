@@ -1,0 +1,12 @@
+active: false
+derived: false
+header: ''
+level: 1.8
+links: []
+normative: true
+rationale: |
+  Demonstration of: following an airline, safely descending and landing, hovering in space.
+ref: ''
+reviewed: Gg1CiTPYNKMuV3PONpKyxy09f0FaE2XS9twvgUhHGUM=
+text: |
+  The platform shall have defined autonomous behaviors.

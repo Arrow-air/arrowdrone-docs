@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.5
+links: []
+normative: true
+rationale: |
+  Some telemetry (warnings, errors, events) will occur outside of regularly scheduled telemetry.
+ref: ''
+reviewed: MM0cI5pdfHZp9_6Ew305M5pmhHu0MaZnsQQ1r2BlkTU=
+text: |
+  The platform shall downlink aperiodic event reports.

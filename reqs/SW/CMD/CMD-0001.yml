@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+level: 1.0
+links:
+- REQ-0007: Kqsc6a-OEYsUHSXCo0h_xmwXz7oQswxBCA2LMgQLCLI=
+normative: true
+rationale: |
+  Command packets will be continuous (remote control transmitter) or aperiodic (command to change configuration).
+  Won't want to drop the aperiodic command packets on accident, as they can be safety critical commands like
+  immediately powering off.
+ref: ''
+reviewed: rq3yz8-mhpQOY0a2MjcFbLRlz09P7b7niwhzw_OgG8g=
+text: |
+  CMD_SVC shall queue command packets.

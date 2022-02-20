@@ -1,0 +1,12 @@
+active: false
+derived: false
+header: ''
+level: 1.4
+links: []
+normative: true
+rationale: |
+  The battery itself may remain in the platform or be hot swappable, either way the batteries should support recharge.
+ref: ''
+reviewed: wm9YicP0l8riWhP2Cb6oKOv7PzYC16VzTelaoqdUvfU=
+text: |
+  The platform shall have a rechargeable battery system.

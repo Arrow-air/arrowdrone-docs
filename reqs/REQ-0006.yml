@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.2
+links: []
+normative: true
+rationale: |
+  Desire is for the platform to be networked but only under control of approved users.
+ref: ''
+reviewed: vciObFMLpnSwMND9dFxQjwHHfANnD-BBroJHyryfl-c=
+text: |
+  The platform shall support bidirectional wireless communication with approved devices.

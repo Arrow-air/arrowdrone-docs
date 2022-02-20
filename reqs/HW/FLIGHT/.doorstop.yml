@@ -1,0 +1,9 @@
+settings:
+  digits: 4
+  parent: REQ
+  prefix: FLIGHT
+  sep: '-'
+attributes:
+  publish:
+    - verified-by
+    - rationale

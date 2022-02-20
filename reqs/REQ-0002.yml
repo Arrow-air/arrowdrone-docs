@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: ''
+level: 1.1
+links: []
+normative: true
+rationale: |
+  Telemetry that will be *expected* at some known frequency. Loss of this telemetry can be indicative of loss of signal.
+ref: ''
+reviewed: LbETQ9JP--LIZ5Zrfy54ZdOCGqzId_d0HOQZDO28d7Y=
+text: |
+  The platform shall downlink periodic telemetry.

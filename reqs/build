@@ -1,0 +1,21 @@
+#!/bin/bash
+
+python3 doorstop_yml_formatter.py
+if [ $? -eq 0 ]; then
+    doorstop publish all public/ # This may not scale
+    doorstop export all ./requirements.xlsx # This may not scale
+else
+    echo "FAILURE, exiting build."
+    exit 1
+fi
+
+python3 doorstop_hooks.py
+if [ $? -eq 0 ]; then
+    doorstop publish all public/ # This may not scale
+    doorstop export all ./requirements.xlsx # This may not scale
+else
+    echo "FAILURE, exiting build."
+    exit 1
+fi
+
+exit 0

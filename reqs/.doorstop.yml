@@ -1,0 +1,8 @@
+settings:
+  digits: 4
+  prefix: REQ
+  sep: '-'
+attributes:
+  publish:
+    - verified-by
+    - rationale
