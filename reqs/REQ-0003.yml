@@ -10,3 +10,5 @@ ref: ''
 reviewed: MM0cI5pdfHZp9_6Ew305M5pmhHu0MaZnsQQ1r2BlkTU=
 text: |
   The platform shall downlink aperiodic event reports.
+type: Requirement
+verified-by: unverified

@@ -10,3 +10,5 @@ ref: ''
 reviewed: LbETQ9JP--LIZ5Zrfy54ZdOCGqzId_d0HOQZDO28d7Y=
 text: |
   The platform shall downlink periodic telemetry.
+type: Requirement
+verified-by: unverified

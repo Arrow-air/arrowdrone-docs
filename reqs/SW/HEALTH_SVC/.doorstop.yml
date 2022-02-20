@@ -1,6 +1,8 @@
 attributes:
   defaults:
+    rationale: null
     type: Requirement
+    verified-by: unverified
   publish:
   - verified-by
   - type

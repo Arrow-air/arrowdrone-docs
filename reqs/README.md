@@ -191,7 +191,7 @@ added item: PWR-0004 (@/reqs/HW/PWR/PWR-0004.yml)
 To view the requirements outside of source code, do one of the following:
 1) `doorstop-server`
     - Visit `localhost:7867` in your browser
-2) `python -m http.server PORT` 
+2) `cd public/; python -m http.server PORT` 
     - Visit `localhost:PORT` in your browser
 3) `doorstop-gui`
     - tkinter application

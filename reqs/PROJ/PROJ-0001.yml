@@ -11,3 +11,5 @@ ref: ''
 reviewed: Cfq47pZ7chTEp0Nuc8AXHcEZS81KdBn3oXdcfe1uqr0=
 text: |
   The project shall enforce explicitly stating the SI Unit beside any numerical value of measurement.
+type: Requirement
+verified-by: unverified

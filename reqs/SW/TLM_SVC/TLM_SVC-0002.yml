@@ -10,3 +10,5 @@ ref: ''
 reviewed: k0J2zZJVlwBW4rJQK4Y5XZxMLikBh4tvkEOIxMH1ysY=
 text: |
   TLM_SVC shall queue event reports.
+type: Requirement
+verified-by: unverified
