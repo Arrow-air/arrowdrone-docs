@@ -14,3 +14,5 @@ text: |
   TLM_SVC shall downlink telemetry at a parameterized frequency.
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

@@ -5,10 +5,15 @@ import sys
 import re
 import yaml
 
+# Constants
+# To appear in every .doorstop.yml
 DIGITS = 4
 SEPARATOR = '-'
 TYPE = 'Requirement'
 
+##
+## Helper
+##
 def failure(msg):
     print("ERROR: %s. Failing %s." % (
         msg, __file__
@@ -28,6 +33,14 @@ def req_yaml_format(filename):
         x = contents.get('verified-by')
         if not x or x is None:
             contents['verified-by'] = 'unverified'
+
+        x = contents.get('verified-date')
+        if not x or x is None:
+            contents['verified-date'] = 'unverified'
+    
+        x = contents.get('verified-comment')
+        if not x or x is None:
+            contents['verified-comment'] = 'unverified'
 
     with open(filename, 'w') as yml_file:
         yaml.dump(contents, yml_file)
@@ -49,6 +62,8 @@ def doorstop_yaml_format(filename):
         
         contents['attributes']['publish'] = [
             'verified-by',
+            'verified-date',
+            'verified-comment',
             'type',
             'rationale'
         ]
@@ -57,16 +72,22 @@ def doorstop_yaml_format(filename):
             contents['attributes']['defaults'] = {}
 
         # Needs to be specific value
-        contents['attributes']['defaults']['type'] = 'Requirement'
+        contents['attributes']['defaults']['type'] = TYPE
         
         # Default is None
         if not contents['attributes']['defaults'].get('rationale'):
             contents['attributes']['defaults']['rationale'] = None
 
         # Default is "unverified"
-        x = contents['attributes']['defaults'].get('verified-by')
-        if not x or x is None:
-            contents['attributes']['defaults']['verified-by'] = 'unverified'
+        l = [
+            'verified-by',
+            'verified-date',
+            'verified-comment',
+        ]
+        for item in l:
+            x = contents['attributes']['defaults'].get(item)
+            if not x or x is None:
+                contents['attributes']['defaults'][item] = 'unverified'
 
 
     with open(filename, 'w') as yml_file:

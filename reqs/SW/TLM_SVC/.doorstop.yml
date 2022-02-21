@@ -3,8 +3,12 @@ attributes:
     rationale: null
     type: Requirement
     verified-by: unverified
+    verified-comment: unverified
+    verified-date: unverified
   publish:
   - verified-by
+  - verified-date
+  - verified-comment
   - type
   - rationale
 settings:

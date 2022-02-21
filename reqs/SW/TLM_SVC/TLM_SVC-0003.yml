@@ -16,3 +16,5 @@ text: 'TLM_SVC shall downlink event report packets once per FIXME Hz RTI.
   '
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

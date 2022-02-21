@@ -12,3 +12,5 @@ text: |
   TLM_SVC shall queue event reports.
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

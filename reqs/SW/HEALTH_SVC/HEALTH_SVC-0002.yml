@@ -13,3 +13,5 @@ text: |
   HEALTH_SVC shall provide an interface to get the health status (HEALTHY, SICK, or DEAD) of a device.
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

@@ -13,3 +13,5 @@ text: |
   HEALTH_SVC shall provide an interface to mark a device as HEALTHY, SICK, or DEAD.
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

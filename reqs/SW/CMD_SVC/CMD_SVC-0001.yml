@@ -13,3 +13,5 @@ text: |
   CMD_SVC shall queue command packets.
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified

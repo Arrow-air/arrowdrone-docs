@@ -20,3 +20,5 @@ text: 'CMD_SVC shall process a command packet once every FIXME Hz RTI.
   '
 type: Requirement
 verified-by: unverified
+verified-comment: unverified
+verified-date: unverified
