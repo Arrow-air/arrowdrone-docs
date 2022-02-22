@@ -63,7 +63,7 @@ derived: false
 header: ''
 level: 1.0
 links:
-- REQ-0001: bBkf6YMFHFULHe5eLcjSBipaMvJL7t5BdNTRJdS-4Ug=
+- SW-0001: bBkf6YMFHFULHe5eLcjSBipaMvJL7t5BdNTRJdS-4Ug=
 normative: true
 rationale: |
   If a device is acting offnominally, the software manager in charge of that device may elect to mark it as SICK or DEAD
@@ -78,7 +78,7 @@ Important Field | Description
 ---- | ---
 `text` | The primary text of the requirement
 `rationale` | Why the requirement exists, explanation of values in requirement, etc. This is a required field and is enforced with the `build` script.
-`links` | Links to parent requirements. In this case REQ-0001 (*The platform shall maintain the health status of each device*) is the parent requirement. **All lower level requirements must have a parent.** This is enforced with the `build` script.
+`links` | Links to parent requirements. In this case SW-0001 (*The platform shall maintain the health status of each device*) is the parent requirement. **All lower level requirements must have a parent.** This is enforced with the `build` script.
 `active` | If the requirement is in draft and you don't want to cause build errors, set this to `false`.
 
 
@@ -122,7 +122,7 @@ Common errors and their fixes:
 Common Error | Fix
 --- | ---
 `EXAMPLE-0001: Rationale is required!` | Populate a `rationale` field in the requirement file.
-`EXAMPLE-0001: A parent is required for a lower level requirement!` | `doorstop link EXAMPLE-0001 REQ-####`<br>Or manually update the `links` field in the requirement's `.yml`.
+`EXAMPLE-0001: A parent is required for a lower level requirement!` | `doorstop link EXAMPLE-0001 PARENT-####`<br>Or manually update the `links` field in the requirement's `.yml`.
 `EXAMPLE-0001: suspect link` | Set the suspect link to `null` in the requirement's `.yml`
 `EXAMPLE-0001: unreviewed changes` | `doorstop review EXAMPLE-0001`.<br>Use `all` for resolving all reviews.
 `WARNING: no item with UID: EXAMPLE-0001` | This can happen if `active:false` in `EXAMPLE-0001.yml`.
@@ -141,7 +141,7 @@ A requirement category can be added with `doorstop create`:
 
 ```bash
 # doorstop create <category name> <path> --parent REQ
-$ doorstop create PWR ./HW/PWR --parent REQ
+$ doorstop create PWR ./HW/PWR --parent HW
 building tree...
 created document: PWR (@/reqs/HW/PWR)
 ```
@@ -150,7 +150,7 @@ You will see that a new directory was created and populated with a `.doorstop.ym
 ```yaml
 settings:
   digits: 3
-  parent: REQ
+  parent: HW
   prefix: PWR
   sep: ''
 ```
@@ -167,7 +167,7 @@ attributes:
   - rationale
 settings:
   digits: 4
-  parent: REQ
+  parent: HW
   prefix: PWR
   sep: '-'
 ```
@@ -188,7 +188,7 @@ The new file can be manually populated with the required fields.
 
 You must then link the requirement to a parent requirement before the build can succeed:
 
-`doorstop link PWR-0001 REQ-####`
+`doorstop link PWR-0001 HW-####`
 
 You can add multiple requirements add the same time with the `-c` option:
 
