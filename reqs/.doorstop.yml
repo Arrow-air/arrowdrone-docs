@@ -1,0 +1,17 @@
+attributes:
+  defaults:
+    rationale: null
+    type: Requirement
+    verified-by: unverified
+    verified-comment: unverified
+    verified-date: unverified
+  publish:
+  - verified-by
+  - verified-date
+  - verified-comment
+  - type
+  - rationale
+settings:
+  digits: 4
+  prefix: REQ
+  sep: '-'
