@@ -1,0 +1,23 @@
+#!/bin/bash
+
+CSV=csv_files
+
+python3 doorstop_yml_formatter.py
+if [ $? -ne 0 ]; then
+    echo "FAILURE, exiting build."
+    exit 1
+fi
+
+# doorstop --no-suspect-check --reorder --no-child-check
+python3 doorstop_hooks.py
+if [ $? -eq 0 ]; then
+    rm -rf public
+    doorstop publish all public/ # This may not scale
+    rm -rf ./$CSV
+    doorstop export all ./$CSV # This may not scale
+else
+    echo "FAILURE, exiting build."
+    exit 1
+fi
+
+exit 0
